@@ -1,5 +1,7 @@
 package org.example;
 
+import com.sun.source.tree.Tree;
+
 import java.lang.reflect.Array;
 import java.util.*;
 
@@ -39,15 +41,29 @@ public class Main {
 //      System.out.println(hashset);
 //      System.out.println(hashset1);
 
-        List<studentMarks> marks = new ArrayList<>();
-        marks.add(new studentMarks(1,5));
-        marks.add(new studentMarks(1,9));
-        marks.add(new studentMarks(3,1));
-        marks.add(new studentMarks(10,0));
+//        List<studentMarks> marks = new ArrayList<>();
+//        marks.add(new studentMarks(1,5));
+//        marks.add(new studentMarks(1,9));
+//        marks.add(new studentMarks(3,1));
+//        marks.add(new studentMarks(10,0));
+//
+//        Set<studentMarks> linkedStudent = new LinkedHashSet<>(marks);
+//
+//        System.out.println(linkedStudent);
+//        System.out.println(linkedStudent.contains(new studentMarks(1,5)));
 
-        Set<studentMarks> linkedStudent = new LinkedHashSet<>(marks);
 
-        System.out.println(linkedStudent);
-        System.out.println(linkedStudent.contains(new studentMarks(1,5)));
+        NavigableSet<Integer> set5 = new TreeSet<>();
+        set5.add(1);
+        set5.add(65);
+        set5.add(23);
+        set5.add(49);
+        System.out.println(set5);
+
+        System.out.println(set5.floor(2));
+        System.out.println(set5.lower(2));
+
+        System.out.println(set5.ceiling(20));
+        System.out.println(set5.higher(20));
     }
 }
